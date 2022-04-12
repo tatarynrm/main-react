@@ -1,0 +1,15 @@
+.order {
+    padding: 15px 20px;
+    border: none;
+    background-color: yellow;
+    transition: all .5s ease-in-out;
+    border-radius: 20px;
+    font-size: 20px;
+
+}
+
+.order:hover {
+    color: white;
+    background-color: red;
+    transition: all .5s ease-in-out;
+}

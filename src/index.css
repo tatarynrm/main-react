@@ -1,3 +1,14 @@
+@import './styles/index.css';
+
+@font-face {
+  font-family: 'Luck';
+  src: url(./assets/fonts/Lack-Regular.otf);
+}
+
+* {
+  color: black;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +16,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 95%;
+  margin: 0 auto;
+
+}
+
+.main-content {
+  margin-top: 150px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 40px;
+}
+
+.cu-p {
+  cursor: pointer;
+}
+
+.is-active {
+  border: 1px solid red;
 }

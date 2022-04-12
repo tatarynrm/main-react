@@ -1,0 +1,9 @@
+.logo {
+    width: 150px;
+}
+
+.logo-img {
+    padding: 10px;
+    background-color: yellow;
+    border-radius: 10px;
+}

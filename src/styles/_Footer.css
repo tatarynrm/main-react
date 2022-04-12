@@ -1,0 +1,21 @@
+.footer {
+    background-color: #FFD600;
+    color: green;
+
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer__social {
+    display: flex;
+    flex-direction: column;
+}
+
+.social__links {
+    display: flex;
+    gap: 10px;
+}

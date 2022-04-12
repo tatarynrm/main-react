@@ -1,0 +1,8 @@
+.addres {
+    display: flex;
+    flex-direction: column;
+}
+
+.addres li {
+    list-style: none;
+}
