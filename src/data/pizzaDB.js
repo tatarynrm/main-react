@@ -14,7 +14,7 @@ export const pizzas = [
         img: virtyalna,
         imgHover: virtyalnaHover,
         id: 1,
-        price: 100,
+        price: 349.50,
         weight: 30,
         size: 40
     },

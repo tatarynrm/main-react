@@ -1,8 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
+// import axios from 'axios';
+import Context from '../../context/context';
 
 const ShopCart = () => {
 
+    const { totalSum, setTotalSum } = useContext(Context);
+    console.log(totalSum);
+    useEffect(() => {
+
+    }, [totalSum])
 
     return (
         <div className='shop-cart'>
@@ -10,9 +17,9 @@ const ShopCart = () => {
             <Link className='header__cart' to={'/shop-cart-page'}>
                 <img src="https://la.ua/wp-content/themes/lapiec/assets/frontend/img/icons/shopping-cart.svg" alt="" />
 
-                <span>100грн</span>
+                <span>{totalSum} грн</span>
             </Link>
-
+            <div className='emoji'>{totalSum > 90 ? '🙂🙂🙂' : "🙁🙁🙁" && totalSum < 10 ? 'Замовте щось' : null}</div>
 
 
         </div>

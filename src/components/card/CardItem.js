@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import ButtonOrder from '../buttonOrder/ButtonOrder'
+import React, { useContext, useEffect, useState } from 'react'
 import ShopCart from '../cart/ShopCart'
 import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai'
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import { RemoveCircle } from '@mui/icons-material';
+import axios from 'axios';
+import Context from '../../context/context';
 
-
-const CardItem = ({ name, id, desc, img, price, weight, size, imgHover }) => {
+const CardItem = ({ name, id, desc, img, price, weight, size, imgHover, onClick }) => {
     const [over, setOver] = useState(false)
     const [count, setCount] = useState(1);
-    // const [productCount, setProdcutCount] = useState();
+    const [cartItems, setCardItems] = useState([]);
     const totalPrice = count * price;
+    const { totalSum, setTotalSum } = useContext(Context);
+
     useEffect(() => {
-        console.log('1');
-    }, [count, over])
 
-
-
+    }, [])
 
 
     const btnPlus = () => {
@@ -29,13 +28,9 @@ const CardItem = ({ name, id, desc, img, price, weight, size, imgHover }) => {
         }
 
     }
-    const addToCard = () => {
-        let order = [name, price, img, count, totalPrice]
-        localStorage.setItem('order', [order])
-        console.log(order);
 
-
-
+    const addItems = () => {
+        onClick({ name, img, price, count, size });
     }
 
 
@@ -81,11 +76,13 @@ const CardItem = ({ name, id, desc, img, price, weight, size, imgHover }) => {
 
                 </div>
                 <div className="product-order">
-                    <ButtonOrder addToCard={addToCard} />
+                    <button onClick={addItems} className='order cu-p'>
+                        Замовити
+                    </button>
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }
 

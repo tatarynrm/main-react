@@ -1,14 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
+import ReactDOM from "react-dom/client";
 import './index.css';
+import Context from './context/context'
 import App from './App';
 
+const MainApp = () => {
+  const [totalSum, setTotalSum] = useState(0);
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+
+  return (
+    <React.StrictMode>
+      <Context.Provider value={{ totalSum, setTotalSum }}>
+        <App />
+      </Context.Provider>
+
+    </React.StrictMode>
+  )
+}
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <MainApp />
 );
-
 
