@@ -6,6 +6,8 @@ import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import { RemoveCircle } from '@mui/icons-material';
 import axios from 'axios';
 import Context from '../../context/context';
+// import '../../assets/pizza-images/diabola.jpg'
+// import img1 from '../../assets/pizza-images/diabola.jpg'
 
 const CardItem = ({ name, id, desc, img, price, weight, size, imgHover, onClick }) => {
     const [over, setOver] = useState(false)
@@ -33,7 +35,7 @@ const CardItem = ({ name, id, desc, img, price, weight, size, imgHover, onClick 
         onClick({ name, img, price, count, size });
     }
 
-
+    console.log(img === `../../assets/pizza-images/diabola.jpg`);
     return (
         <div className='card-item' >
 

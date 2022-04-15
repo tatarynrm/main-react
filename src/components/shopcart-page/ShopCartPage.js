@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import uniqid from 'uniqid'
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
 
 const ShopCartPage = () => {
 
